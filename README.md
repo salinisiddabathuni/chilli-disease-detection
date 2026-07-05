@@ -1,5 +1,16 @@
 # Smart Chilli Leaf Disease Detection System
 
+🚀 ESP32-CAM + TinyML + GSM SMS
+
+📱 No Internet Required
+
+🌱 Detects 8 Chilli Diseases
+
+⚡ 87.4% Accuracy
+
+💰 Cost Under ₹2500
+# Smart Chilli Leaf Disease Detection System
+
 
 
 > A solar-powered IoT device using ESP32-CAM and TinyML that detects 
