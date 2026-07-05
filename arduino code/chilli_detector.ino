@@ -2,13 +2,6 @@
 // CHILLI LEAF DISEASE DETECTION SYSTEM
 // ESP32-CAM + TinyML (MobileNetV2) + SIM800L GSM
 // Detects 8 chilli diseases and sends SMS alert to farmer
-//
-// Files needed in this folder:
-//   chilli_detector.ino  → this file
-//   chilli_model.h       → from your Colab training
-//   data/
-//     chilli_disease.tflite → from your Colab training
-//
 // Board: AI Thinker ESP32-CAM
 // ================================================================
 
@@ -16,7 +9,6 @@
 #include "SPIFFS.h"
 #include <SoftwareSerial.h>
 
-// TensorFlow Lite Micro headers
 #include "tensorflow/lite/micro/all_ops_resolver.h"
 #include "tensorflow/lite/micro/micro_interpreter.h"
 #include "tensorflow/lite/micro/micro_log.h"
@@ -28,10 +20,7 @@
 #define GSM_RX_PIN  14    // SIM800L TX → ESP32 GPIO14
 #define GSM_TX_PIN  15    // SIM800L RX → ESP32 GPIO15
 
-// ── CHANGE THIS to farmer's real phone number ─────────────────
-String FARMER_NUMBER = "+919876543210";
-
-// ── Thresholds for demo (lower = easier to trigger SMS) ───────
+String FARMER_NUMBER = "+919876543210";─
 // For real field deployment change to: TRAP_SAFE=5, TRAP_WARN=15
 #define DISEASE_CONFIDENCE_THRESHOLD  60   // % confidence needed to send alert
 #define HEALTHY_CONFIDENCE_THRESHOLD  80   // % confidence to say "safe"
@@ -39,7 +28,6 @@ String FARMER_NUMBER = "+919876543210";
 // ── GSM Serial ───────────────────────────────────────────────
 SoftwareSerial gsmSerial(GSM_RX_PIN, GSM_TX_PIN);
 
-// ── Disease class names — must match Colab training order ─────
 const char* DISEASES[] = {
   "Anthracnose",
   "Bacterial Spot",

@@ -29,8 +29,7 @@ farmer's basic mobile phone via SMS.
 
 
 
-
-##### **5 Novel Features**
+ **5 Novel Features**
 
 
 
