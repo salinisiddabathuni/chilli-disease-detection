@@ -1,0 +1,24 @@
+DATASET INFORMATION
+====================
+
+Dataset used: PlantVillage Dataset
+Source: https://www.kaggle.com/datasets/emmarex/plantdisease
+
+Classes used (8):
+1. anthracnose       - 600 images (from Tomato Target Spot folder)
+2. bacterial_spot    - 600 images (from Pepper Bell Bacterial Spot)
+3. cercospora_spot   - 600 images (from Tomato Septoria Leaf Spot)
+4. healthy           - 600 images (from Pepper Bell Healthy + Tomato Healthy)
+5. leaf_curl         - 600 images (from Tomato Yellow Leaf Curl)
+6. mosaic_virus      - 600 images (from Tomato Mosaic Virus)
+7. powdery_mildew    - 600 images (from Tomato Leaf Mold)
+8. thrips_damage     - 600 images (15 real + 485 augmented)
+
+Total: 4,800 images (600 per class - balanced)
+
+Augmentation used: rotation, horizontal flip, vertical flip,
+zoom, brightness change, shear
+
+Training: Google Colab (free GPU)
+Model: MobileNetV2 alpha=0.35
+Final accuracy: 87.4% validation accuracy
